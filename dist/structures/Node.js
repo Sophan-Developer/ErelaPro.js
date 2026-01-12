@@ -281,7 +281,7 @@ class Node {
         else {
             // V4 plugin events (PlayerCreatedEvent, VolumeChangedEvent, PauseEvent, etc.)
             // These are informational events from Lavalink V4 plugins and can be safely ignored
-            const v4PluginEvents = ['PlayerCreatedEvent', 'VolumeChangedEvent', 'PauseEvent', 'ResumeEvent', 'PlayerConnectedEvent', 'FiltersChangedEvent'];
+            const v4PluginEvents = ['PlayerCreatedEvent', 'VolumeChangedEvent', 'PauseEvent', 'ResumeEvent', 'PlayerConnectedEvent', 'FiltersChangedEvent', 'SeekEvent'];
             if (!v4PluginEvents.includes(type)) {
                 const error = new Error(`Node#event unknown event '${type}'.`);
                 this.manager.emit("nodeError", this, error);
